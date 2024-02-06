@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(127, 161, 255);
+}
+
+.container{
+    background-color: #fff;
+}
+
+@media (min-width: 576px) {
+
+    body{
+        background-color: rgb(185, 219, 216);
+    }
+}

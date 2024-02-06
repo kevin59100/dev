@@ -1,0 +1,161 @@
+@font-face {
+  font-family: alfaSlabOne-Regular;
+  src: url(../fonts/AlfaSlabOne-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/fond.webp");
+}
+
+body > span {
+  background-color: black;
+  color: white;
+  font-family: alfaSlabOne-Regular, sans-serif;
+  float: right;
+  padding: 0.5em;
+}
+
+.clear::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#logo {
+  float: left;
+}
+#logo img {
+  width: 150px;
+  opacity: 0.6;
+}
+
+#title-flex {
+  display: flex;
+  flex-direction: column;
+}
+#title-flex > h2 {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 1em;
+  font-family: alfaSlabOne-Regular, sans-serif;
+}
+
+h1 {
+  font-family: alfaSlabOne-Regular, sans-serif;
+}
+
+h3 {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+
+#web,
+h4 {
+  opacity: 0.6;
+  font-family: alfaSlabOne-Regular, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 75%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .children {
+  width: 32%;
+  background-image: linear-gradient(#ebe1e1, rgb(190, 180, 180));
+  border-radius: 10px;
+  padding: 0.5em;
+  position: relative;
+}
+.container .children p {
+  text-align: justify;
+  margin-bottom: 2em;
+}
+.container .children button {
+  font-family: alfaSlabOne-Regular, sans-serif;
+  background-color: black;
+  color: white;
+  float: right;
+  border-radius: 10px;
+  padding: 0.5em;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+.container .children button:hover {
+  background-color: red;
+}
+.container .children .box {
+  border: 1px solid white;
+  float: left;
+  margin-right: 0.5em;
+}
+.container .children .box img {
+  width: 100%;
+}
+
+.card {
+  box-shadow: 2px 5px 5px black;
+}
+
+.text-box {
+  background-color: red;
+  color: white;
+  opacity: 0.6;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0;
+  font-family: alfaSlabOne-Regular, sans-serif;
+}
+
+#triangle {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid white;
+  display: inline-block;
+}
+
+.left {
+  transform: rotate(90deg);
+}
+
+.right {
+  transform: rotate(-90deg);
+}
+
+.top,
+.up {
+  transform: rotate(180deg);
+}
+
+.bottom,
+.down {
+  transform: rotate(0deg);
+}
+
+@media only screen and (max-width: 640px) {
+  #title-flex > h2 {
+    font-size: 0.75em;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .children {
+    width: 100%;
+    margin-top: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

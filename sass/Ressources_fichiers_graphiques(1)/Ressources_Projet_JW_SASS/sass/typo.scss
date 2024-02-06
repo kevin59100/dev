@@ -1,0 +1,12 @@
+@use "sass:math";
+
+$logo_width: 10em;
+@font-face{
+    font-family: "title_font";
+    src: url(../fonts/AlfaSlabOne-Regular.ttf);
+}
+
+$colNumber: 3;  
+$cardWidth: floor(math.div(98%, $colNumber));  
+$containerWidth : 1400px;
+@debug $cardWidth

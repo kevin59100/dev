@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les bases CSS - Position Flux normal</title>
+    <link href="normalize.css" rel="stylesheet">
+    <style>
+        h1,h2
+        {
+            background-color: darkgray;
+        }
+        #zoneTexte {
+           background-color: green;
+
+           overflow: hidden;
+        }
+        #zoneImages {
+            background-color: violet ;
+        }
+        p {
+            background-color: yellow;
+            margin-top: 15px;
+            margin-bottom: 15px; 
+        }
+
+        img {
+            background-color: aqua;
+            /* "margin"==> marge externe */
+            margin: 15px;
+            /* padding==> marge interne (encadré) */
+            padding: 15px;
+            vertical-align: middle;
+            /* largeur uniform */
+            width: 55px;
+        }
+
+        /* le span est un élément inline */
+        span {
+            background-color: orange;
+            /* les marges ne s'appliquent que verticalement */
+            margin: 15px;
+            display: inline-block;         
+        }     
+    </style>
+</head>
+
+<body>
+    <h1>Mes images</h1>
+    <h2>En position normal</h2>
+    <div id="zoneTexte">
+        <p>Ce sont des images <span id="span1">libres</span><span id="span2">de droit</span> de nourriture</p>
+        <p>Deuxième paragraphe</p>
+        <p>Troisième paragraphe</p>
+    </div>
+    <div id="zoneImages">
+        <img src="images/img3.jpg" />
+        <img src="images/img1.jpg" />
+        <img src="images/img2.jpg" />
+        
+    </div>
+</body>
+
+</html>

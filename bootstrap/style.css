@@ -1,0 +1,55 @@
+body {
+  background-color: #582900;
+}
+@font-face {
+  font-family: inspi;
+  src: url(../fonts/Inspiration-Regular.ttf);
+}
+#head {
+  display: flex;
+}
+
+#head h1 {
+  font-family: inspi;
+  color: white;
+}
+nav li {
+  display: inline;
+}
+
+ul {
+  list-style-type: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#global {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(51, 139, 110);
+  color: white;
+}
+#gauche {
+  max-width: 30%;
+}
+#banniere {
+  max-width: 40%;
+}
+
+#gris {
+  background-color: grey;
+  padding: 3%;
+}
+#galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#galerie img {
+  width: 250px;
+  height: 250px;
+  padding: 3%;
+}

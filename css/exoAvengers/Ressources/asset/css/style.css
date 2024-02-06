@@ -1,0 +1,87 @@
+header{
+    background-color: #f5e49f;
+
+}
+nav{
+    margin-top: 5%;
+    float: right;
+}
+
+/* va prendre tous les "a qui sont dans la nav */
+nav a{
+    text-decoration: none;
+    /* va créer un espace entre les a */
+    margin-left: 2em;
+    color: #ff8b00;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+/* Correspond au fond d'écran gris de la page */
+body{
+    background-image: url("../../img/fond.png");
+    /* taille de la police d'écriture */
+    font-size: 16px;
+}
+
+main{
+    background-color: white;
+    }
+
+/* tous les fils direct de "body" */
+body > *{
+    /* bord de l'image jusque fin de texte = 750px */
+    width: 750px;
+/* par défaut il calcul les marge automatiquement */
+    margin: auto;
+    /* c'est la marge intérieure qui permet de ne pas coller les débuts d'image et de texte */
+    /* voir lien sur discord concernant les em et rem */
+    padding: 1em;
+}
+/*        OU           */
+/*  la liste exhaustive des fils direct de body */
+header, main, footer{
+    /* défini la largeur */
+    width: 750px;
+    padding: 1em;
+}
+
+/*  toutes les img descendantes de main, fils de body */
+body > main img{
+    width: 40%;
+    /* permet de mettre le texte à coté de l'image et annule le clear de base   */
+    float: left;
+    margin-right: 1em;
+}
+
+p{
+    text-align: justify;
+}
+
+body > main > article > a{
+    color: white;
+    background-color: #ff8b00;
+    padding: 0.5em;
+    float: right;
+}
+
+/* le " ::after" sert a ajouter un élément à la fin de ce qui est juste avant le ::after */
+
+.clear{
+    /* crée un contenu vide */
+    content: "";
+    /* va empecher qu'il y ai quelquechose à gauche et à droite de mon lien */
+    clear: both;
+    display: table;
+}
+
+footer{
+    text-align: center;
+}
+
+h2{
+   color: #ff8b00; 
+   font-family: 'Oswald', sans-serif;
+}

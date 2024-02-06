@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Animation et Vidéos</h2>
+
+    <div>
+        <h3>Via la balise HTML5 VIDEO</h3>
+        <h4>Appel d'une vidéo locale</h4>
+
+        <!--Pour une vidéo on utilisera la balise du même nom la largeur et la hauteur sont facultatives si pas
+ces parametres, la vidéo sera lue dans sa taille déja définie.
+l'attribut CONTROLS permet d'avoir le bouton PLAY. On indiquera ensuite la "source" et le "type"  -->
+    
+    <video controls>
+        <source src="mana_mana.mp4">
+    </video>
+</div>
+
+    <div>
+        <h4>Appel d'une vidéo sur le web</h4>
+
+        <a href="https://dd.a-n-k.fr/public/mana_mana.mp4">vidéo</a>
+        <video width="320" height="240" controls>
+            <source src="https://dd.a-n-k.fr/public/mana_mana.mp4" type="video/mp4" />
+        </video>
+
+    </div>
+
+</body>
+
+</html>

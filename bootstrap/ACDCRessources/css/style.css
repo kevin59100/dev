@@ -1,0 +1,29 @@
+@font-face {
+    font-family: theDark;
+    src: url(../fonts/TheDark.ttf);
+}
+
+@font-face {
+    font-family: rocknrollTypoCrazy;
+    src: url(../fonts/rocknroll_typo_crazy.ttf);
+}
+
+.the-dark{
+    font-family: theDark, sans-serif;
+}
+
+.navbar{
+    background-color: #212529;
+}
+
+.ln{
+    height: 32px;
+}
+
+#mail::placeholder{
+    color: red;
+}
+
+#comments::placeholder{
+    color: red;
+}

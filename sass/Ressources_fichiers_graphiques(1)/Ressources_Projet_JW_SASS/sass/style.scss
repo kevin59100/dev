@@ -1,0 +1,87 @@
+@import "couleurs";
+@import "mixins";
+@import "typo";
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/fond.webp");
+    >span:nth-child(1){
+        float: right;
+        background-color: $back_title_color;
+    }
+
+    .text-box{
+        background-color: $back_legend_color;
+    }
+
+    #title-flex{
+        float: left;
+        margin-left: 2em;
+        width: calc(100vw - 4.5em - $logo_width);
+        font-family: "title_font";
+    }
+    
+    hr{
+        clear: both;
+        margin:0;
+    }
+    
+    .container{
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .children{
+        width: $cardWidth;
+    }
+
+
+
+    h1{
+        font-weight: bold;
+    }
+    
+    h2{
+        @include blackBox;
+        background-color: $back_main_title_color;
+        padding: 10px;
+    }
+    
+}
+
+#logo{
+    float: left;
+    img{
+        width: $logo_width;
+        opacity: 0.5;
+
+    }
+}
+
+button{
+    background-color: $back_button_color;
+}
+
+
+span, h2, h3, .text-box.text-box1, button{
+    color: $title_color
+}
+
+
+h3{
+    @include blackBox
+}
+
+#web, h4{
+    color: $web_title_color;
+}
+
+.clear::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+

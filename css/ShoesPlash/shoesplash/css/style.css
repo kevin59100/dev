@@ -1,0 +1,285 @@
+/* définitons des variables GLOBALES DU SITE (couleurs)  */
+:root{
+    --back :  #f2f2f2;
+    --color0 :#000000;
+    --color1 :#f6d4f5;
+    --color2 :#5b435b;
+    --color3 :#e9aaf1;
+    --color4 :#ea35c0;
+    --color5 :#90bb45;
+    --color6 :#0298b0;
+}
+
+*{
+    /* /* inclure la marge interne et la bordure à la largeur de tous les éléments de la page. */ 
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: var(--back);
+}
+
+#cart{
+color: var(--color3);
+}
+
+/* deux possibilités : soit tous les <i> de la class cart */
+#cart > i, .fa.fa-shopping-cart.right{
+    font-size: 2em;
+    /* permet de descendre le caddy */
+    line-height: 2em;
+}
+
+/* si on ne met rien ca sera un des descendants de cart il prendra tous les span, si on met un chevron ca 
+sera le fils */
+#cart span{
+    color: var(--color0);
+    font-weight: bolder;
+    /* pour n'avoir personne a droite et personne a gauche*/
+    display: block;
+    text-align: right;
+}
+
+.container > nav{
+    /* etire les liens sur toute la largeur */
+    display: flex
+}
+
+.container > nav > a{
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    /* prendra 1em en bas et en haut et 0 sur les côtés */
+    padding: 1em 0;
+    color: var(--color0);
+    /* définirez une transition de type ease et de durée 0.2 seconde sur toutes la balises a de ce document 
+    afin d'améliorer les effets de survol. */
+    transition: all 0.2s;
+    text-transform: uppercase;
+    }
+
+    div.container > a > img{
+        margin-left: 5em;
+    }
+
+/* Vous rendrez responsives toutes les images de votre page en jouant sur la propriété max-width 
+du SELECTEUR IMG */
+img{
+    /* mon image n'a pas le droit d'agrandir la boite et comme mon image est dans la section
+    qui est dans le main donc dans le .container qui est en 1500px, mon image sera redimensionnée */
+    max-width: 100%;
+}
+
+
+.container > nav > a:hover{
+    color: white;
+    background-color: rgb(53,50,50);
+}
+
+/* Les balises associées à la CLASSE CONTAINER devront occuper 75% de la largeur de la page jusqu'à une 
+max-width de 1500 pixels */
+.container{
+    width: 75%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.topbar{
+    background-color: var(--color0);
+    color: var(--color3);
+    text-align: center;
+}
+
+header{
+    background-color: var(--color1);
+}
+
+/* Les classes .left et .right permettent de flotter les éléments respectivement à gauche et à droite. */
+.left{
+    float: left;
+}
+
+/* Les classes .left et .right permettent de flotter les éléments respectivement à gauche et à droite. */
+.right{
+    float: right;
+}
+
+#slider > h2{
+    background-color: var(--color1);
+    position: absolute;
+    opacity: 0.8;
+    padding: 1em;
+    margin-left: 1em;
+}
+
+#slider > img{
+    border: 20px solid white;
+}
+
+#slider, #select, #news, footer{
+    margin-top: 2em;
+}
+
+#slider, #select, #new, #best, #crush{
+    box-shadow: 0 0 5px rgba(0,0, 0, 1);
+}
+#news > *{
+    background-color: white;
+    width: 33.1%;
+    text-align: center;
+    display: inline-block;
+}
+
+#news > * > h2{
+    text-align: left;
+    padding: 0.25em;
+}
+
+#news > * > img{
+    height: 347px;
+}
+
+#new, #best, #crush{
+    padding: 0 6em 1.25em;
+}
+
+#new > h2{
+    background-color: var(--color4);
+}
+
+#new > h2::before, #best > h2::before, #crush > h2::before{
+    content: url("../img/logo4.png");
+    padding-right: 0.5em;
+}
+
+#best > h2{
+    background-color: var(--color5);
+}
+
+#crush > h2{
+    background-color: var(--color6);
+}
+
+
+#select{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+}
+
+#select > h1{
+    width: 100%;
+    margin-left: 2em;
+}
+
+#select > article{
+    flex: 1;
+    text-align: center;
+}
+
+#select:hover > article{
+    opacity: 0.5;
+    transition: opacity ease 1s;
+}
+
+#select > article:hover{
+    opacity: 1;
+    transition: opacity ease 1s;
+}
+
+.escarpin > img{
+    height: 110px;
+}
+
+#info{
+    background-color: var(--color3);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 0;
+}
+
+#info .fa{
+    display: block;
+    text-align: center;
+}
+
+#bottombar{
+    background-color: var(--color1);
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bottombar > article > ul{
+    list-style: none;
+    padding: 0;
+}
+
+#info article:hover{
+    color: white;
+    background-color: rgb(53,50,50);
+    cursor: pointer;
+}
+
+#bottombar li:hover{
+    color: var(--color1);
+    background-color: rgb(53,50,50);
+    cursor: pointer;
+}
+
+h3{
+    font-family: 'Courgette', cursive;
+}
+
+/* 1ère version pour gérer le débordement des éléments flottants */
+.clear{
+    overflow: auto;
+}
+
+/* 2ème version pour gérer le débordement des éléments folttants
+ */
+.clear::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* quand le média est uniquement un écran d'au max 640px */
+@media only screen and (max-width: 640px){
+    .escarpin > img{
+        height: auto;
+    }
+    #news{ display: block; }
+    .container > #news > * {
+        width: 100%;
+    }
+    #new, .escarpin{
+        width: 100%;
+    }
+    div:container > a > img{
+        margin-left: auto;
+    }
+    #cart{ 
+        display: none;
+    }
+    nav{
+        flex-direction: column;
+    }
+    #slider > h2{
+        position: initial;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+    #select, #bottombar, #info{
+        flex-direction: column;
+    }
+    #info{
+        text-align: center;
+    }
+    #crush, #new, #best{
+        padding: 1em;
+    }
+}
+

@@ -1,0 +1,33 @@
+@mixin opacity {
+    opacity: 0.6;
+}
+
+@mixin invertVideo {
+    background-color: $backColor;
+    color: $textColor;
+}
+
+
+
+// @mixin roundedBorder{
+//     border-radius: 10px;
+// }
+
+// ou
+
+@mixin roundedBorder($size, $padding:0.5em){
+    border-radius: $size;
+    padding: $padding;
+}
+
+@mixin alfaText{
+    font-family: alfaSlabOne-Regular, sans-serif;
+}
+
+@mixin rightFloat{
+    float: right;
+}
+
+@mixin leftFloat{
+    float: left;
+}

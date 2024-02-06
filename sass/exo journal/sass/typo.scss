@@ -1,0 +1,18 @@
+@use "sass:math";
+$logoWidth: 150px;
+$containerWidth: 75%;
+
+// on veut 3 colonnes à répartir sur toute la largeur de la pafge (100%)
+// on prend 98% pour créer de l'epsacement entre chaque enfant
+// on divise la largeur choisie (98%)
+// par le nombre d'enfants (3) que l'on arrondit à l'inferieur (floor)
+
+$childNumber:3;
+$childWidth: floor($number: math.div(98%, $childNumber));
+$padding: 0.5em;
+
+// pour définir une nouvelle police de cractère
+@font-face {
+    font-family: alfaSlabOne-Regular;
+    src: url(../fonts/AlfaSlabOne-Regular.ttf);
+}

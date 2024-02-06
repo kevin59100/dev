@@ -1,0 +1,13 @@
+table{
+    width: 25%;
+    margin: auto;
+
+}
+td{
+    padding: 1em;
+    vertical-align: top;
+    text-align: justify;
+}
+#kiss{
+    float: right;
+}

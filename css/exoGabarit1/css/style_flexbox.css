@@ -1,0 +1,64 @@
+body {
+    
+    /* l'axe principal est horizontal (défaut) */
+    display: flex;
+    /* l'axe principal est vertical */
+    flex-direction : column ;
+    /* body tient toute la page */
+    min-height : 100vh ;
+}
+
+main {
+    /* contenu réparti sur axe horizontal */
+    display : flex ;
+    /* main occupe la place disponible */
+    flex-grow : 1 ;
+    
+}
+
+section {
+    margin-left: 5px;
+    background-color: pink;
+    /* section occupe la place disponible */
+    flex-grow : 1 ;
+    border-radius: 20px;
+    color: white;
+    padding-left: 1em;
+}
+
+header {
+    
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 5px;
+
+}
+
+footer {
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(100, 173, 100);
+    margin: 5px;
+}
+
+aside {
+    border: 4px solid green;
+
+}
+
+nav {
+    color: white;
+    background-color: orange;
+    width: 20%;
+    /* le menu passe à gauche */
+    order :-1 ;
+    border-radius: 20px;
+
+}
+
+nav p{
+    /* permet de creer une ligne et les pixel permet de grossir la ligne */
+    border-bottom: 2px solid white;
+    /* marge intérieur basse permet de baisser les lignes */
+    padding-bottom: 0.5em;
+}

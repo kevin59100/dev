@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<title>AC/DC</title>
+</head>
+
+<style>
+	body {
+		background-color: black;
+		background-image: url(img/Sans\ titre.png);
+		background-repeat: no-repeat;
+		background-size: 1400px;
+		background-position-x: -160px;
+	}
+</style>
+
+<body class="pt-5 mt-4">
+
+
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-dark w-75">
+		<div class="container-fluid">
+			<span class="the-dark text-white">AC</span>
+			<img src="img/lightning.svg" class="ln" alt="lightning">
+			<span class="the-dark text-white">DC</span>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+				aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon text-white"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarScroll">
+				<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+					<li class="nav-item ">
+						<div id="Accueil"></div>
+						<a class="nav-link text-danger the-dark" aria-current="page" href="#accueil">Accueil</a>
+					</li>
+					<li class="nav-item ">
+						<div id="Membres"></div>
+						<a class="nav-link text-danger the-dark" aria-current="page" href="#membres">Membres</a>
+					</li>
+					<li class="nav-item">
+						<div id="Discographie"></div>
+						<a class="nav-link text-danger the-dark" aria-current="page"
+							href="#discographie">Discographie</a>
+					</li>
+					<li class="nav-item">
+						<div id="Agenda des concerts"></div>
+						<a class="nav-link text-danger the-dark" aria-current="page" href="#agenda des concerts">Agenda
+							des concerts</a>
+					</li>
+					<li class="nav-item">
+						<div id="Contact"></div>
+						<a class="nav-link text-danger the-dark" aria-current="page" href="#contact">Contact</a>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="accueil" class="container-fluid text-center">
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/ac-dc-1.png" class="d-inline w-50" alt="mainPicture">
+				</div>
+				<div class="carousel-item">
+					<img src="img/ac-dc-2.png" class="d-inline w-50" alt="nextPicture">
+				</div>
+				<div class="carousel-item">
+					<img src="img/ac-dc-3.png" class="d-inline w-50" alt="lastPicture">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+
+	<h3 class="text-white text-center mt-5"><span class="the-dark text-white">AC</span><img src="img/lightning.svg"
+			class="ln" alt="lightning"><span class="the-dark text-white">DC</span> -- Les members du groupe --</h3>
+
+	<div id="membres" class="container-fluid w-100">
+		<div class="d-flex-md justify-content-evenly row">
+			<figure class="figure col-6 col-md-2">
+				<img class="border h-75" src="img/brian-johnson.png" alt="brian">
+				<figcaption class="text-white text-">Brian johnson (Chant)</figcaption>
+			</figure>
+			<figure class="figure col-6 col-md-2">
+				<img class="border h-75" src="img/angus-young.png" alt="angus-young">
+				<figcaption class="text-white">Angus Young (Guitare solo)</figcaption>
+			</figure>
+			<figure class="figure col-6 col-md-2">
+				<img class="border h-75" src="img/steve-young.png" alt="steve">
+				<figcaption class="text-white">Steve Young (Guitare)</figcaption>
+			</figure>
+			<figure class="figure col-6 col-md-2">
+				<img class="border h-75" src="img/cliff-williams.png" alt="cliff">
+				<figcaption class="text-white">Cliff Williams (Basse)</figcaption>
+			</figure>
+			<figure class="figure col-6 col-md-2">
+				<img class="border h-75" src="img/chris-slade.png" alt="chris">
+				<figcaption class="text-white">Chris Slade (Batterie)</figcaption>
+			</figure>
+		</div>
+	</div>
+
+	<h3 class="text-white text-center mt-5"><span class="the-dark text-white">AC</span><img src="img/lightning.svg"
+			class="ln" alt="lightning"><span class="the-dark text-white">DC</span> -- La discographie --</h3>
+
+
+	<div id="discographie" class="container-fluid w-50 text-center d-flex flex-wrap justify-content-evenly">
+
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/High-voltage-1975.jpg" class="card-img-top" alt="first">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1975 : High Voltage</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Highway-to-hell-1979.jpg" class="card-img-top" alt="second">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1979 : Highway to hell</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Back-in-black-1980.jpg" class="card-img-top" alt="third">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1980 : back in black</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Who-made-who-1986.jpg" class="card-img-top" alt="four">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1986 : Who made who</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Blow-up-your-video-1988.jpg" class="card-img-top" alt="five">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1988 : Blow up your video</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Razor-edge-1990.jpg" class="card-img-top" alt="six">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1990 : Razor's edge</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Ballbreaker-1995.jpg" class="card-img-top" alt="seven">
+			<div class="card-body">
+				<h5 class="card-title text-danger">1995 : BallBreaker</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Stiff-upper-lip-2000.jpg" class="card-img-top" alt="eight">
+			<div class="card-body">
+				<h5 class="card-title text-danger">2000 : stiff Upper Lip</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+		<div class="card mb-2 border-top-0 border-bottom-0 border-white border-5" style="width: 15rem;">
+			<img src="img/Discographie/Black-ice-2008.jpg" class="card-img-top" alt="nine">
+			<div class="card-body">
+				<h5 class="card-title text-danger">2008 : Black Ice</h5>
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt perferendis
+					voluptates velit? Nostrum ipsam necessitatibus quaerat obcaecati reiciendis nisi.</p>
+				<a href="#" class="btn btn-danger">Lire plus...</a>
+			</div>
+		</div>
+
+	</div>
+
+	<h3 class="text-white text-center mt-5 mb-"><span class="the-dark text-white">AC</span><img src="img/lightning.svg"
+			class="ln" alt="lightning"><span class="the-dark text-white">DC</span> -- Les Dates des concerts --</h3>
+
+
+	<div id="agenda des concerts" class="container-fluid w-75">
+		<table class="table table-dark table-hover">
+			<thead class="border-danger">
+				<tr>
+					<th class="col text-danger">Date</th>
+					<th class="col text-danger">Heure</th>
+					<th class="col text-danger">Salle</th>
+					<th class="col text-danger">Ville</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td scope="row">08/06/2000</th>
+					<td>21:00</td>
+					<td>Stade de France</td>
+					<td>Paris</td>
+				</tr>
+				<tr>
+					<td scope="row">12/05/2002</th>
+					<td>21:00</td>
+					<td>Esplanade</td>
+					<td>Singapour</td>
+				</tr>
+				<tr>
+					<td scope="row">18/09/2009</th>
+					<td>20:30</td>
+					<td>Opera</td>
+					<td>Sydney</td>
+				</tr>
+				<td scope="row">12/09/2021</th>
+				<td>20:30</td>
+				<td>Massey Hall</td>
+				<td>Toronto</td>
+				</tr>
+				<td scope="row">12/09/2022</th>
+				<td>20:30</td>
+				<td>Madison Square Garden</td>
+				<td>New york</td>
+				</tr>
+				<td scope="row">08/06/2023</th>
+				<td>21:30</td>
+				<td>Stade de France</td>
+				<td>Paris</td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+
+	<h3 class="text-white text-center mt-5 mb-"><span class="the-dark text-white">AC</span><img src="img/lightning.svg"
+			class="ln" alt="lightning"><span class="the-dark text-white">DC</span> -- Contact --</h3>
+
+	<div id="contact" class="container text-center ">
+		<div class="mb-3">
+
+			<input type="text" class="form text-danger" id="name" placeholder="nom">
+			<input type="text" class="form text-danger" id="surname" placeholder="Prénom">
+		</div>
+		<div class="mb-3">
+			<input type="email" class="form-control mb-2" id="mail" placeholder="E-mail">
+			<textarea class="form-control" id="comments" placeholder="Votre message" rows="3"></textarea>
+		</div>
+
+		<button type="button" class="btn btn-danger">Envoyer</button>
+		<button type="button" class="btn btn-danger">Annuler</button>
+
+
+
+	</div>
+
+
+</body>
+
+</html>

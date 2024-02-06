@@ -1,0 +1,6 @@
+/* Afin de selectionner une colonne sur laquelle on veut agir on utilise la formule : nth-child. 
+"even" = pair et "odd" = impair "child" = enfant <tr> est l'enfant de <table> */
+
+td:nth-child(even){    
+    width: 150px;
+}

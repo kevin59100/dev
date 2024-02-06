@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: 'Courgette', cursive;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.topbar{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+header {
+    background-color: #f6d4f5;   
+}
+
+header .container>nav a:hover {
+    background-color: rgb(53, 50, 50);
+    color: white;
+    transition: all 0.1s ease 0s;
+}
+
+.container {
+    width: 75%;
+    max-width: 1500px;
+}
+
+div>.fa {
+    color: #E5ADEE;
+    font-size: xx-large;
+}
+
+span {
+    font-weight: bold;
+}
+
+.container>a {
+    display: inline-block;
+    margin-left: 10em;
+    margin-bottom: 2em;
+}
+
+.right.clear {
+    float: right;
+    margin-right: 10em;
+}
+
+.left {
+    display: inline-block;
+}
+
+.left>span {
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: bold;
+}
+
+nav {
+    text-align: center;
+}
+
+
+nav>a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 15em;
+    padding-bottom: 2em;
+}
+
+main {
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+#slider {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#slider>h2 {
+    position: relative;
+    top: 5.95em;
+    margin-left: 0.8em;
+    width: 40%;
+    background-color: #f6d4f5;
+    opacity: 0.8;
+    text-align: justify;
+}
+
+span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#slider>img {
+    margin-top: 0em;
+}
+
+main > section > img{
+    border: solid 20px;
+    border-color: white;
+    /* margin-top: 3em; */
+}
+
+#select:hover {
+    opacity: 0.5;
+    transition: all 0.2s ease 0s;
+}
+
+#select>.escarpin {
+    display: inline-block;
+}
+
+header, main, footer {
+    width: 75%;
+    max-width: 1500px;
+}
+
+main>section {
+    width: 100%;
+}
+
+#select {
+    background-color: white;
+    padding: 0.75em;
+}
+
+#select>article.escarpin {
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+}
+
+img {
+    max-width: 100%;
+}
+
+#news {
+    display: flex;
+    flex-wrap: nowrap;
+}

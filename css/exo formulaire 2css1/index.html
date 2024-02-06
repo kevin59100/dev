@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- methode POST = methode GET sauf que les données envoyées ne sont pas visible dans la barre d'adresse -->
+    <form method="post" action="http://www.afpa.fr">
+
+
+        <h1 style="text-align: center;">Nous lançons une grande enquête sur les anciens stagiaires</h1>
+        <h3 style="text-align: center;">Merci de nous repondre</h3>
+        <br>
+        <section class="coordonnees">
+            <form action="formulaire">
+                <fieldset>
+                    <legend> mes coordonées </legend>
+                    <label>votre nom*</label>
+                    <input type="text" name="nom" required><br>
+                    <label>votre prénom*</label>
+                    <input type="text" name="prenom" required><br>
+                    <label>Votre date de naissance</label>
+                    <input type="date" name="bday" pattern="\d{4}-\d{2}-\d{2}" /><br>
+                    <label>Votre adresse</label>
+                    <input type="text" name="adresse"><br>
+                    <label>Votre ville</label>
+                    <input type="text" name="ville"><br>
+                    <label>Votre code postale</label>
+                    <input type="text" name="adresse" pattern="\d{5}" /><br>
+                    <label>Votre E-mail*</label>
+                    <input type="text" name="e-mail" required><br>
+                    <label>Votre numéro de téléphone</label>
+                    <input type="text" name="phone" placeholder="00-00-00-00-00"><br>
+                </fieldset>
+
+
+
+                <!-- Pour un radio bouton, il faut utiliser le même "name" pour 
+    un groupe de bouton-->
+
+                <fieldset>
+                    <div class="genre">
+                        <input type="radio" name="sexe" id="sexmale" value="male" checked />
+                        <label for="sexmale" id="sexmale">Vous êtes un homme</label>
+
+                        <input type="radio" name="sexe" id="female" value="female" />
+                        <label for="female" id="female">Vous êtes une femme</label><br>
+                    </div>
+                </fieldset>
+                <p>
+                <label>profession</label><select name="poste">
+                    <optgroup label="Informatique">
+                        <option value="dev">Développeur</option>
+                        <option value="analyst" selected>Analyste</option>
+                        <option value="chef">Chef de projet</option>
+                    </optgroup>
+                    <option value="other">autre</option>
+                </select></p>
+                <input type="text" name="autre" id="other">
+                <label for="other" id="other">Si vous avez répondu autre, précisez</label>
+                <br>
+                <br>
+
+                <select>
+                    <option value="-1000">&lt;1000€</option>
+                    <option value="tranche2">&gt;1000 et &lt;1500</option>
+                    <option value="tranche3">&gt;1500 et &lt;2000</option>
+                    <option value="tranche4">&gt;2000</option>
+                </select><br>
+                <input type="text" name="annee_stage" id="stage_year" pattern="\d{5}">
+                <label for="stage_year" id="stage_year">En quelle année avez vous suivi le stage AFPA</label>
+                <br>
+                <br>
+
+                <textarea name="textzone" id="textzone" cols="30" rows="10">commentaire</textarea>
+                <br>
+                <strong>Merci d'avoir répondu au questionnaire</strong>
+                <br>
+                <input type="submit" value="validez">
+                <input type="reset" value="annulez">
+
+
+            </form>
+        </section>
+
+
+</body>
+
+</html>

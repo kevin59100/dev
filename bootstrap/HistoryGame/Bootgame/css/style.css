@@ -1,0 +1,21 @@
+.nav-link{
+    color: rgba(243, 237, 237, 0.4) !important;
+}
+
+body{
+    text-align: justify;
+}
+
+.nav-link.active{
+    color: white !important;
+}
+
+.container{
+    max-width: 90%;
+}
+
+.container > header > div{
+    font-size: larger; 
+    background-color: beige;
+    border-radius: 10px;
+}

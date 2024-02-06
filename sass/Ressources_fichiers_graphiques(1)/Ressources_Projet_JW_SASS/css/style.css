@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "title_font";
+  src: url(../fonts/AlfaSlabOne-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/fond.webp");
+}
+body > span:nth-child(1) {
+  float: right;
+  background-color: #000;
+}
+body .text-box {
+  background-color: red;
+}
+body #title-flex {
+  float: left;
+  margin-left: 2em;
+  width: calc(100vw - 4.5em - 10em);
+  font-family: "title_font";
+}
+body hr {
+  clear: both;
+  margin: 0;
+}
+body .container {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+}
+body .children {
+  width: 32%;
+}
+body h1 {
+  font-weight: bold;
+}
+body h2 {
+  background-color: black;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+#logo {
+  float: left;
+}
+#logo img {
+  width: 10em;
+  opacity: 0.5;
+}
+
+button {
+  background-color: black;
+}
+
+span, h2, h3, .text-box.text-box1, button {
+  color: white;
+}
+
+h3 {
+  background-color: black;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+#web, h4 {
+  color: #666;
+}
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*# sourceMappingURL=style.css.map */

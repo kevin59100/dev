@@ -1,0 +1,173 @@
+@import "couleurs";
+@import "typo";
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/fond.webp");
+}
+
+body {
+    &>span {
+        @include invertVideo;
+        @include alfaText;
+        float: right;
+        padding: $padding;
+    }
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#logo {
+    float: left;
+
+    img {
+        width: $logoWidth;
+        @include opacity;
+    }
+}
+
+#title-flex {
+    display: flex;
+    flex-direction: column;
+
+    >h2 {
+        @include invertVideo;
+        @include roundedBorder(10px, 1em);
+        @include alfaText;
+    }
+}
+
+h1 {
+    @include alfaText
+}
+
+h3 {
+    @include invertVideo;
+    @include roundedBorder(10px);
+    text-transform: uppercase;
+
+}
+
+#web,
+h4 {
+    @include opacity;
+    @include alfaText
+}
+
+.container {
+    display: flex;
+    width: $containerWidth;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .children {
+        width: $childWidth;
+        background-image: linear-gradient($lightGradientColor, $darkGradientColor);
+        @include roundedBorder (10px);
+        position: relative;
+
+
+        p {
+            text-align: justify;
+            margin-bottom: 2em;
+        }
+
+        button {
+            @include alfaText;
+            @include invertVideo;
+            @include rightFloat;
+            @include roundedBorder(10px);
+            position: absolute;
+            bottom: 1em;
+            right: 1em;
+
+            // le & rappelle tous les ancêtres dans le bloc que l'on vient d'imbriquer ici:
+            // .container .children button
+
+            &:hover {
+                background-color: $textBoxBackColor;
+            }
+        }
+        .box{
+            border: 1px solid white;
+            @include leftFloat;
+            margin-right: 0.5em;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.card {
+    // 2px = gauche/droite de la lumiere 
+    // 5px= haut/bas de la lumière
+    // 5px= floutage de l'ombre
+    box-shadow: 2px 5px 5px black;
+}
+
+.text-box {
+    background-color: $textBoxBackColor;
+    color: $textColor;
+    @include opacity;
+    text-align: center;
+    @include roundedBorder (10px, 0);
+    @include alfaText
+}
+
+
+
+#triangle {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid white;
+    display: inline-block;
+}
+
+.left {
+    transform: rotate(90deg);
+}
+
+.right {
+    transform: rotate(-90deg);
+}
+
+.top,
+.up {
+    transform: rotate(180deg);
+}
+
+.bottom,
+.down {
+    transform: rotate(0deg);
+}
+
+@media only screen and (max-width:640px){
+    #title-flex{
+        &> h2{
+            font-size: 0.75em;
+        }
+    }
+    .container{
+        flex-direction: column;
+
+        .children{
+            width: 100%;
+            margin-top: 1em;
+        }
+
+    }
+}

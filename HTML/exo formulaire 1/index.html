@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Formulaires standards</title>
+</head>
+
+<body>
+    <!-- La méthode GET permet d'envoyer, lors de la validation le formulaire sur le site désigné, ici c'est 
+        l'AFPA != de la méthode POST ou là les données ne sont pas visible dans la barre d'adresse  -->
+    <form method="get" action="http://www.afpa.fr">
+        <p>
+            Entrez votre nom......
+            <input type="text" name="le_nom" />
+        </p>
+        <p>
+            Entrez votre e-mail...
+            <input type="text" name="email" /> <!-- HTML5 ? -->
+        </p>
+        <p><i>Quel micro-ordinateur utilisez-vous ?</i></p>
+        <ol>
+            <!-- l'input type "checkbox" permet de mettre un bouton carré et de selectionner plusieurs
+            plusieurs carrés -->
+            <li><input type="checkbox" name="micro1" value="Pc" />PC</li>
+            <li><input type="checkbox" name="micro2" value="Mac" />Mac</li>
+            <li><input type="checkbox" name="micro3" value="Unix" />Station
+                Unix</li>
+        </ol>
+        <p><i>Média de distribution ?</i></p>
+        <ol>
+            <li><input type="radio" name="media" value="Cd" checked="checked" />
+                CD-ROM</li>
+            <li><input type="radio" name="media" value="Dk" />Disquette</li>
+        </ol>
+        <p><input type="submit" value="validez" /></p>
+    </form>
+</body>
+
+</html>

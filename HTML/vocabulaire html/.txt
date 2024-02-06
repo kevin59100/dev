@@ -1,0 +1,41 @@
+            LES SYMBOLES
+
+[] crochets / square brackets
+{} accolades / curly brackets
+() parenthèses / parentheis
+<> chevrons
+| tube / pipe
+# dièse / sharp
+& esperluette / ampersand
+~ tilde / tilde AltGr+2 et espace
+"" guillemets / double quote
+'' apostrophes / (simple) quote
+- tiret / hyphen
+_ souligné / underscore
+`quote inversé / back tick AltGr+7 et espace
+\ antisalsh / backslash
+/ slash / slash
+@ arobase / arobase (at)
+$ dollar / dollar
+, virgule / coma
+; point virgule / semicolon
+: deux-point / 
+. point / dot (point)
+? point d'interrogation / question mark
+! point d'exclamation / exclamation point
+... points de suspension / dots
+
+            LES RACCOURCIS
+
+ctrl + n = nouveau fichier
+Ctrl + Alt+ haut ou bas = eddition multiligne
+Ctrl + t = nouvel onglet
+Ctrl + Shift + t = réouvrir le dernier onglet fermé
+Ctrl + A = tout sélectionner
+Ctrl + k et F = bien indenter
+Ctrl + K et C = mettre en commentaire
+Ctrl + K et U = ne plus mettre en commentaire
+Windows + L = Verrouiller
+Windows + M = réduire toutes les pages = revenir au bureau
+Ctrl + -> = Aller a la fin du mot
+Ctrl + <- = Aller au début du mot

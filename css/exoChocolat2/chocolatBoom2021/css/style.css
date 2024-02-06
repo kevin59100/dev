@@ -1,0 +1,63 @@
+p {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body {
+    background-color: #1B8B8F;
+    box-sizing: border-box;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+main {
+    display: flex;
+}
+
+h2 {
+    background-color: #5E3D2C;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.4em;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.5em 0;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+
+    background-color: #448186;
+}
+
+main.container >aside {
+    background-color: #F9FDFC;
+    padding: 20px;
+    line-height: 2em;
+}
+
+nav {
+    background-color: #5E3D2C;
+    padding: 1em;
+}
+
+nav > a:hover{
+    background-color: #8e7b6d;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 2em;
+    color: white;
+    font-size: 1.6em;
+}
+
+section>img {
+    margin-left: 1em;
+    margin-right: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+}

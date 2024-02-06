@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- methode POST = methode GET sauf que les données envoyées ne sont pas visible dans la barre d'adresse -->
+    <form method="post" action="http://www.afpa.fr">
+
+    <h1 style="text-align: center;">Nous lançons une grande enquête sur les anicens stagiaires</h1>
+    <h3 style="text-align: center;">Merci de nous repondre</h3>
+    <br>
+
+    <input type="text" name="nom">Votre nom<br>
+    <input type="text" name="prenom">Votre Prénom<br>
+    <input type="text" name="naissance">Votre date de naissance<br>
+    <input type="text" name="adresse">Votre adresse<br>
+    <input type="text" name="ville">Votre ville<br>
+    <input type="text" name="code postale">Votre code postale<br>
+    <input type="text" name="e-mail">Votre E-mail<br>
+
+    <input type="radio" name="sexe" id="sexmale" value="male" />
+    <label for="sexmale">Vous êtes un homme</label>
+
+    <input type="radio" name="sexe" id="female" value="female" />
+    <label for="female">Vous êtes une femme</label><br>
+
+    <select name="poste">
+        <option value="dev">Développeur</option>
+        <option value="analyst">Analyste</option>
+        <option value="chef">Chef de projet</option>
+        <option value="other">autre</option>
+    </select><br>
+    <input type="text" name="autre">
+    <label>Si vous avez répondu autre, précisez </label>
+    <br>
+    <br>
+
+    <select>
+        <option value="-1000">&lt;1000€</option>
+        <option value="tranche2">&gt;1000 et &lt;1500</option>
+        <option value="tranche3">&gt;1500 et &lt;2000</option>
+        <option value="tranche4">&gt;2000</option>
+    </select><br>
+    <input type="text" name="annee_stage">
+    <label>En quelle année avez vous suivi le stage AFPA</label>
+    <br>
+    <br>
+
+    <textarea name="textzone" id="textzone" cols="30" rows="10">commentaire</textarea>
+    <br>
+    <strong>Merci d'avoir répondu au questionnaire</strong>
+<br>
+    <input type="submit" value="validez">
+    <input type="reset" value="annulez">
+
+
+</form>
+
+
+</body>
+
+</html>

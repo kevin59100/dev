@@ -1,0 +1,90 @@
+.galerie{
+  /* le conteneur va gerer le contenu en mode flex. Il va redimensionner les elements */
+  display: flex;
+  /* va remettre a la ligne automatiquement et ne pas tout mettre sur une seule ligne */
+  flex-wrap: wrap;  
+}
+
+.galerie img{
+  border: 2px solid white;
+  /* taille de chaque colonne */
+  flex: 14.28%;
+  /* largeur maximum de l'image */
+  max-width: calc(14.28% - 4px);
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+  color: green;
+}
+
+.galerie img:hover{
+  z-index: 1;
+  animation: survol 1s;
+/* permet de rester en zoom */
+  animation-fill-mode: forwards;
+}
+
+
+/* Dans le keyframes je veux dire que je pars d'un état pour arriver à un autre état
+   Dans la définition du css ex: .galerie img j'applique mon keyframes (animation)
+   
+   selecteur = .galerie img:hover{}
+   Attribut = z-index / animation / color ...etc
+  valeur = survol 2s / forwards / reduction ...etc*/
+   
+
+@keyframes survol{
+  from{
+    /* ZOOM */
+    scale: 1;
+  }
+  to{
+    scale: 1.5;
+  }
+}
+
+  /* selectionne les images de galerie qui ont une iamge suivante survolée */
+.galerie img:has(~ img:hover),
+/* selectionne les images de galerie qui ont une image précédente survolée */
+.galerie img:hover~img:not(:hover){
+  filter: sepia(100%);
+  animation: reduction 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reduction{
+  from{
+    scale: 1;
+  }
+  to{
+    scale: 0.9;
+  }
+  
+}
+
+  /* médiaqueries expression dont la valeur est toujours vraie ou fausse. 
+  Permet de faire un site responsive
+   pour TELEPHONE= max 600px */
+  @media(max-width: 600px){
+    .galerie img{
+      flex: 50%;
+      max-width: calc(50% - 4px)
+    }
+  }
+  /* pour médiaqueries pour TABLETTE
+  LE "AND" est un opérateur logique */
+  @media(max-width: 1000px) and (min-width: 600px){
+    .galerie img{
+      flex: 25%;
+      /* largeur maximum de l'image - 2px de bordure. comme 2 bordures chaque coté=2px*2px= 4px */
+      max-width: calc(25% - 4px);
+    }
+  }
+

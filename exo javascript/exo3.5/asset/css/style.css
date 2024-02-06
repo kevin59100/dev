@@ -1,0 +1,10 @@
+body{
+    background-color: aquamarine;
+}
+
+@media (min-width: 576px) {
+
+    body{
+        background-color: rgb(79,238,22);
+    }
+}

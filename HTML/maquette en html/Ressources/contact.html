@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form method="post" action="http://www.afpa.fr">
+
+        <img src="SiteDWWM/Images/logo.jpeg" alt="logo de l'afpa">
+        <nav class="menu"></nav>
+        <ul>
+            <li><a href="accueil">Accueil</a></li>
+            <li><a href="La_formation">La formation</a></li>
+            <li><a href="Ils_témoignent">Ils témoignent</a></li>
+            <li><a href="ref">Nos références</a></li>
+            <li><a href="contact">Nous contacter</a></li>
+        </ul>
+
+        <h1>Contactez-nous</h1>
+
+        <label>Prénom nom</label>
+        <input type="text" name="nom">
+        <br>
+        <label>Votre adresse mail</label>
+        <input type="text" name="mail">
+        <br>
+        <label>Votre téléphone</label>
+        <input type="text" name="tel">
+        <br>
+        <label>Vous êtes :</label>
+        <br>
+
+        <input type="radio" name="situation" id="emploi" value="demandeur_emploi">
+        <label for="emploi">Demandeur d'emploi</label>
+        <br>
+
+        <input type="radio" name="situation" id="transition" value="transition_pro">
+        <label for="transition">Salarié en transition pro</label>
+        <br>
+
+        <input type="radio" name="situation" id="other" value="autre">
+        <label for="other">Autre</label>
+        <br>
+
+        <label>Vos modalités pédagogiques préférées : </label>
+        <br>
+        <input type="radio" name="modalite" id="present" value="formation">
+        <label for="present">en présentiel</label>
+        <br>
+        <input type="radio" name="modalite" id="distance" value="dist">
+        <label for="distance">100 % Distance</label>
+        <br>
+        <input type="radio" name="modalite" id="alternance" value="alt">
+        <label for="alternance">Alternance</label>
+        <br>
+        <input type="radio" name="modalite" id="preference" value="pref">
+        <label for="preference">Pas de préférence</label>
+        <br>
+
+        <label>vous êtes résiedent de la région </label>
+        <select>
+            <option value="region">Choisissez votre région</option>
+        </select>
+        <br>
+        <textarea name="textzone" id="textzone" cols="30" rows="10">Votre message</textarea>
+        <label>Votre message</label>
+        <br>
+        <input type="submit" value="Envoyer">
+
+    </form>
+
+</body>
+
+</html>
