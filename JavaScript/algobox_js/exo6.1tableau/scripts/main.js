@@ -3,7 +3,7 @@ let tableau=new Array(7);
 
 // pour chaque élément de mon tableau (via l'index) on lui met une valeur qui correspond à l'index
 for(i=0; i < tableau.length; i++){
-    tableau[i]=i;
+    tableau[i]=0;
 }
 alert(tableau);
 
