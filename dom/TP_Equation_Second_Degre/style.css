@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    background-image: url(math.jpg);
+    font-family: "Fredericka the Great", serif;
+font-weight: 400;
+font-style: normal;
+color: grey;
+}
+.main-title{
+    background-color: rgb(28, 80, 28);
+    margin-left: 10em;
+    margin-right: 10em;
+    border: solid;
+    border-color: black;
+    height: 57em;
+}
+h4{
+    text-align: center;
+    font-size: larger;
+
+}
+
+input{
+    width: 60px;
+}
+.main-title{
+    text-align: center;
+}
