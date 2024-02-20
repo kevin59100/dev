@@ -5,10 +5,16 @@ function ChargeInfosjson() {
         .then((response) => {
             return response.json();
         })
-        .then((cheval) => {
-            console.log(cheval);
-            createHTML(cheval);
+        .then((data) => {
+            console.log(data);
+            createHTML(data);
         });
+
+        // equivalent de .then
+    // let response = fetch("pizzas.json");
+    // let data = response.json();
+    // console.log(data);
+    // createHTML(data);
 }
 
 function createHTML(_data) {

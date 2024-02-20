@@ -16,7 +16,10 @@ fetch("margot-robbie.json")
         let actorName = document.querySelector(".actor-name");
         let actorPicture = document.querySelector(".actor-picture");
         let actorMovies = document.querySelector(".actor-movies");
+        // on remplace le texte contenu dans l'élément ayant l'ID actor-name par les propriétés du json
         actorName.innerHTML = _data.firstname + " " + _data.lastname;
+                // on remplace le texte contenu dans l'élément ayant l'ID actor-picture par la propriété
+                //  du json
         actorPicture.src = _data.picture;
 
         let moviesList = "";
