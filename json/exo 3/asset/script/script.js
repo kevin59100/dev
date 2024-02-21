@@ -4,6 +4,15 @@ let booksList = new Array();
 let authorsList = new Array();
 let categoriesList = new Array();
 
+// on crée une variable option pour afficher les dates comme demandé dans l'énoncé
+let options = {
+    // le long permet de mettre en châine de caractère
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+}
+
 // comme le json est conséquent on utilisera le dom content loaded pour charger
 // le json apres avoir chargé le html et css
 document.addEventListener("DOMContentLoaded", jSonOnLoad);
@@ -12,8 +21,9 @@ document.addEventListener("DOMContentLoaded", jSonOnLoad);
 let selectAuthors = document.getElementById("listAuthors");
 selectAuthors.addEventListener("change", chargeByAuthor);
 
+
 let selectCategories = document.getElementById("listCategories");
-selectCategories.addEventListener("change", chargeByAuthor);
+selectCategories.addEventListener("change", ChargeByCategory);
 
 // fonction que l'on va appeler à l'ouverture de la page
 function jSonOnLoad() {
@@ -110,31 +120,109 @@ function showBooks(_data) {
     let bookListElement = document.getElementById("booklist");
     // je met mon booklist.innerHTML vide pour être sûre que dès que je rentre là-dedans
     // toutes les balises qui sont à l'intérieur soient effacées
-    bookListElement.innerHTML="";
+    bookListElement.innerHTML = "";
 
     // Je veux créer des cards pour chaque livre
     for (let index = 0; index < _data.length; index++) {
         let book = _data[index];
-        
+
         let bookElement = document.createElement("div");
         // SETATTRIBUTE => ajouter une classe card 
-        bookElement.setAttribute("class", "card mb-4");
+        // mb ==> margin bottom
+        // col ==> de base c'est réparti sur 12 col, en mettant 2 on divise 12/2=6
+        // il affichera donc 6 images par lignes
+        bookElement.setAttribute("class", "card mb-4 col-2");
 
         // Afficher le titre du livre
-        let titre ="";
-        if (book.title.length > 20){
-        // SUBSTRING => permet ici de dire que si le titre dépasse 20 caractère, on ajoute ...
-        titre = book.title.substring(0,20) + "(...)";
-        } 
+        let titre = "";
+        if (book.title.length > 20) {
+            // SUBSTRING => permet ici de dire que si le titre dépasse 20 caractère, on ajoute ...
+            titre = book.title.substring(0, 20) + "(...)";
+        }
         else {
             titre = book.title;
         }
+        
 
         let description;
         let descriptionShort;
+        let descriptionLong;
+
+        if (book.shortDescription == null || book.shortDescription == undefined) {
+            description = "";
+            descriptionShort = "";
+            descriptionLong = "";
+
+        } else {
+            if (book.shortDescription.length > 20) {
+                descriptionShort = book.shortDescription.substring(0, 20) + "(...)";
+                if (book.longDescription == null || book.longDescription == undefined) {
+                    description = book.shortDescription;
+                }
+                else {
+                    description = book.longDescription;
+                }
+            } else {
+                descriptionShort = book.shortDescription;
+                if (book.longDescription == null || book.longDescription == undefined) {
+                    description = book.shortDescription;
+                }
+                else {
+                    description = book.longDescription;
+                }
+            }
 
 
-        bookElement.innerHTML = "<h1>" + titre + "</h1>";
+        }
+
+        // on s'occupe maintenant des images
+        let image;
+        if (book.thumbnailUrl == null || book.thumbnailUrl == undefined) {
+            image = "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png"
+        } else {
+            image = book.thumbnailUrl;
+        }
+
+
+        bookElement.innerHTML =
+            "<img class = 'img-fluid' src ='" + image + "'/>" + "<h1>" + "<strong>"+titre+"</strong>" + "</h1>";
+
+        if (description != "") {
+            bookElement.innerHTML +=
+                "<h4> <span class='infobulle' title='" +
+                description +
+                "'>" +
+                descriptionShort +
+                "</span> </h4>";
+        }
+
+        // on créer la variable pour ajouter le nombre de page
+        let pageNumber=book.pageCount;
+
+                // on créer la variable pour ajouter l'ISBN
+        let isbn = book.isbn
+                        
+        // on créer la variable pour ajouter la date de publication
+        let datePubli;
+        // TRY ==> instruction que l'on souhaite exécuter, "essayer" et s'il y a une erreur tu l'attrapes
+        // .toLocaleDateString est une fonction qui permet d'afficher la date au format 
+        // date locale ici "fr-FR"
+        try {
+            datePubli = new Date(book.publishedDate.dt_txt).toLocaleDateString("fr-FR", options);
+            // CATCH ==> instruction à exécuter si une exception est levée dans le bloc "try"
+        } catch (error) {
+            datePubli = "pas de date de publication";
+        }
+
+        // INNERHTML affiche toutes les informations 
+        bookElement.innerHTML += "<h4 >" +"<strong>Date de publication :</strong> " 
+        + datePubli + "</h4>" + "<h2>"
+        + "<strong>ISBN</strong>  : "+ isbn + 
+        "<h2>" +"<strong>Nombre de pages</strong> : " + pageNumber +"</h2>";
+        
+        
+
+
         // APPENDCHILD permet d'ajouter un élément dans une div
         // ici la variable bookListElement a été associée à "booklist" du html qui est une div
         bookListElement.appendChild(bookElement);
@@ -144,5 +232,58 @@ function showBooks(_data) {
 
 
 // cette fonction va rafraichir la page dès que l'on aura sélèctionné un auteur dans la liste déroulante
-function chargeByAuthor() { }
+// en cliquant sur un nom on veut recupérer ce nom et afficher les oeuvres associées
+function chargeByAuthor() {
+    // dans le select je vais regarder dans mon tableau des options, et je vais regarder à
+    // l'index sélèctionné (selectedIndex) et je récupère le texte
+    let strAuthor = selectAuthors.options[selectAuthors.selectedIndex].text;
+
+    // je vais créer une nouvelle liste
+    let booksbyAuthor = new Array();
+    // je vais vérifier si strAuthor est vide
+    if (strAuthor == "") {
+        // si on a pas sélèctionner d'auteur => on affiche tout
+        showBooks(booksList);
+    } else {
+        for (index = 0; index < booksList.length; index++) {
+            const element = booksList[index];
+
+            // je veux vérifier dans mon tableau booksbyAuthor si j'ai deja le livre
+            if (element.authors.indexOf(strAuthor) != -1) {
+                booksbyAuthor.push(element);
+            }
+        }
+        // Si un auteur est choisi alors le choix de la catégorie devient vide et inversement.
+       selectCategories.selectedIndex=0;
+        showBooks(booksbyAuthor);
+        
+    }
+
+}
+
+// cette fonction va rafraichir la page dès que l'on aura sélèctionné une catégorie dans la liste déroulante
+// en cliquant sur un nom on veut recupérer ce nom et afficher les oeuvres associées a cette
+// catégorie
+function ChargeByCategory() {
+    let strCategory = selectCategories.options[selectCategories.selectedIndex].text;
+    let booksByCategory = new Array();
+
+    if (strCategory == "") {
+        showBooks(booksList);
+    } else {
+        for (index = 0; index < booksList.length; index++) {
+            const element = booksList[index];
+
+            if (element.categories.indexOf(strCategory) != -1) {
+                booksByCategory.push(element);
+
+            }
+        }
+        // Si une catégorie est choisi alors le choix de la liste d'auteur devient vide et inversement. 
+        selectAuthors.selectedIndex=0;
+        showBooks(booksByCategory);
+            
+    }
+}
+
 
