@@ -1,0 +1,82 @@
+body {
+    background-image: url(aliment2.jpg);
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 1em;
+}
+
+header {
+    background-color: rgb(0, 102, 255);
+opacity: 0.70;
+    color: white;
+}
+
+form {
+    opacity: 0.70;
+    background-color: rgb(0, 102, 255);
+    padding-top: 15px;
+
+}
+
+button {
+    margin-top: 1em;
+}
+
+section * {
+    opacity: 0.90;
+    display: inline-block;
+    background-color: rgb(0, 102, 255);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+section>#photo {
+    color: white;
+    float: left;
+    height: 25em;
+    width: 49%;
+}
+section > #photo > img{
+    padding-top: 2em;
+    height: 75%;
+}
+section>#ingrédient {
+    color: white;
+    float: right;
+    height: 25em;
+    width: 49%;
+}
+
+#nova{}
+
+
+
+#allergene{
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 102, 255);
+    height: 5em;
+    width: 100%;
+}
+
+
+
+
+#information{
+    color: white;
+    background-color: rgb(0, 102, 255);
+    height: 7em;
+    width: 100%;
+}
+
+
+#end{
+    opacity: 0.70;
+    color: white;
+    background-color: rgb(0, 102, 255);
+    height: 4em;
+    width: 100%;
+    margin-top: 2em;
+}
+
+html body div.container section.text-center div#photo.col-lg-6 img
