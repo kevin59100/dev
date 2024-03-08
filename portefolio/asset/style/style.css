@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    background-color: rgb(0, 255, 191);
+    opacity: 0.7;
+}
+
+.nav-item{
+    text-decoration: underline;
+}
+
+
+img{
+    border: solid black;
+    box-shadow: 10px 2px 7px 1px;
+    max-width: 50%;
+    
+  
+}

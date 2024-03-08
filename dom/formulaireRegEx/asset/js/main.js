@@ -10,6 +10,7 @@ title.style.color='red';
 
 
 button.addEventListener('click', function(){
+    
     if(society.value < 1){
         alert('saisir au moins 1 caractère');
     }
@@ -26,6 +27,23 @@ button.addEventListener('click', function(){
         if(!mail.value.includes('@')){
         alert('saisir au moins @');
     }
+    // j'appelle ma fonction contenant ma regex
+    // si l'adresse est différente de mail.value alors incorrecte
+    if(!estAdresseMail(mail.value)){
+        alert('Votre adresse mail est incorrecte !');
+    }
+    
 })
+
+// EXPRESSION REGULIERE ====> REGEX
+function estAdresseMail(chaine){
+    const expression=new RegExp( 
+    "[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[az0-9])?"
+    );
+    return expression.test(chaine);
+}
+
+
+
 
 
