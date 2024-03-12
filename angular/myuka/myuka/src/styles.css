@@ -1,0 +1,157 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+body {
+
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 1em;
+}
+
+header {
+    border-radius: 20px;
+    background-color: rgb(0, 102, 255);
+opacity: 0.70;
+    color: white;
+}
+
+header > h1 > img{
+    width: 50px;
+    margin-left: 15px;
+}
+
+form {
+    border-radius: 20px;
+    opacity: 0.70;
+    background-color: rgb(0, 102, 255);
+    padding-top: 15px;
+
+}
+
+button {
+    margin-top: 1em;
+}
+
+section * {
+    border-radius: 20px;
+    opacity: 0.90;
+    display: inline-block;
+    background-color: rgb(0, 102, 255);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+section>#photo {margin: auto;
+    color: white;
+    float: left;
+    height: 20em;
+    width: 40%;
+}
+section > #photo > img{
+    padding-top: 2em;
+    height: 75%;
+}
+section>#ingrédients {
+    background-color:rgb(0, 102, 255) ;
+    margin: auto;
+    color: white;
+    float: right;
+    height: 20em;
+    width: 40%;
+}
+
+
+#allergene{
+  
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 102, 255);
+    height: 5em;
+    width: 100%;
+}
+
+
+
+
+#information{
+    color: white;
+    background-color: rgb(0, 102, 255);
+    height: 7em;
+    width: 100%;
+}
+
+#divers{ margin: auto;
+    color: white;
+}
+
+#divers > #nutriscore > img{
+    width: 50%;
+}
+
+#divers > #nova > img{
+    width: 45%;
+}
+
+#divers > #huile-de-palme > img{
+filter: opacity(0.4) drop-shadow (0 0 0 red);
+    width: 45%;
+}
+
+
+
+ul{
+    margin-top: 2em;
+    background-color: rgb(0, 102, 255) ;
+    list-style-type: none;
+    text-align: center;
+}
+ul > li{
+    color: white;
+    display: inline;
+    font-weight: bold;
+}
+
+
+a{
+    color: white;
+}
+
+footer{
+  border-radius: 20px;
+    opacity: 0.9;
+}
+
+a:hover{
+    color: white;
+    background-color: #87bb34;
+
+}
+
+@media(max-width: 600px){
+  *{
+    display: flex;
+    flex-direction: column;
+
+    }
+    #divers{
+        width: 60%;
+    }
+
+    form{
+        margin-top: 1em;
+
+        margin-bottom: 1em;
+    }
+    #photo > img{
+        width: 75%;
+    }
+
+   section > #ingrédients{
+        height: auto;
+        width: 40%;
+    }
+    
+    section >#photo{
+        height: auto;
+        width: 40%;
+    }
+    
+}
