@@ -1,22 +1,64 @@
-<p>body works!</p>
+<header>
+<div class="row">
+    <div class="col-lg-4 mx-auto text-center">
+        <div class="mb-3">
+            <input type="text" class="form-control " [formControl]="champ" aria-describedby="emailHelp">
+            <button (click)="afficherValeur()" type="submit" class="btn btn-success" id="bouton">Scanner</button>
+        </div>
+    </div>
+</div>
+</header>
+<header>
+<div class="m-3 text-center">
+<p class="text-center" id="nameProduct"> <b>Nom du produit</b> : {{nomProduit}}</p>
+<P class="text-center" id="code"><b>Code barre du produit</b> : {{codeBarre}}</P>
+<P class="text-center" id="info"><b>Informations sur la marque</b> : {{info}}</P>  
+</div>
+</header>
 <section class="text-center" id="middle">
-    <div class="col-lg-6 mt-3" id="photo">photo</div>
-    <div class="col-lg-6 mt-3" id="ingrédients">ingrédient</div>
+    <div class="col-lg-6 mt-3" id="photo"><b>photo </b><img src={{picture}}></div>
+    <div class="col-lg-6 mt-3" id="ingrédients"><b>ingrédient</b> {{ingredient}} </div>
 </section>
 
 <section>
-    <div  id="allergene">allergenes</div>
+    <div  id="allergene"><b>allergenes</b> <p>{{allergeneElement}}</p></div>
 </section>
 
 <div class="row">
     <section class="d-flex text-center justify-content-between p-5" id="divers">
-        <div class="col-lg-3" id="nova">nova</div>
-        <div class="col-lg-3" id="nutriscore">nutriscore</div>
-        <div class="col-lg-3" id="huile-de-palme">huile de palme</div>
+        <div class="col-lg-3" id="nova"><b>nova</b> <br>{{nova}}</div>
+        <div class="col-lg-3" id="nutriscore"><b>nutriscore</b> <br>{{nutriscore}}</div>
+        <div class="col-lg-3" id="huile-de-palme"><b>huile de palme</b><br>{{oil}}</div>
     </section>
 </div>
 
 
 <section>
-    <div class="info text-center pt-3 " id="information">infos</div>
+    <div class="info text-center pt-3 " id="information"><b>infos</b><br>{{packaging}}</div>
 </section>
+
+
+<footer>
+    <div>
+    <ul>
+    <li>
+        <a href="/mentions-legale">Mentions légales</a>
+    </li>
+    <li>
+        <a href="/conditions-d-utilisation">conditions d'utilisation</a>
+    </li>
+    <li>
+        <a href="/data">Données, API et SDK</a>
+    </li>
+    <li>
+        <a href="/https://fr.arretelesburgers.org/faire-un-don-a-arrete-les-burgers">Faire un don à l'association Arrête Les Burgers</a>
+    </li>
+    <li>
+        <a href="/https://fr.pro.arretelesburgers.org/">Producteurs</a>
+    </li>
+    <li>
+        <a href="/https://link.pro.arretelesburgers.org/newsletter-fr">S'abonner à notre newsletter</a>
+    </li>
+</ul>
+</div>
+</footer>
