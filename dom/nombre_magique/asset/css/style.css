@@ -1,0 +1,16 @@
+body{
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%); 
+    text-align: center;
+    margin: 20em;
+}
+
+#label1{
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#textBox1{
+    border-radius: 10%;
+    width: 10%;
+    padding: 15px;
+}
